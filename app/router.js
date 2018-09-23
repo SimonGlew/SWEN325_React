@@ -70,7 +70,7 @@ export const createRootNavigator = () => {
                     gesturesEnabled: false
                 }
             },
-            EventChange: {
+            EventStack: {
                 screen: EventStack,
                 navigationOptions: {
                     gesturesEnabled: false

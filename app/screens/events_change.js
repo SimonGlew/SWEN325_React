@@ -11,6 +11,7 @@ export default class EventsChange extends Component {
       <View style={styles.container}>
         <Text style={styles.title}>
           EventsChange
+          {this.props.id}
         </Text>
       </View>
     );

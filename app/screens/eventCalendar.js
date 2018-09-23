@@ -4,21 +4,24 @@ import {
     Text,
     View,
     ScrollView,
-    FlatList
+    FlatList,
+    TouchableOpacity
 } from 'react-native';
 
 
 export default class EventCalendar extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.title}>
-                    {this.props.id}
-                    {this.props.time}
-                    {this.props.readableTime}
-                    {this.props.event ? this.props.events : 'No Event'}
-                </Text>
-            </View>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate("EventChange", { id: this.props.id, time: this.props.time, readableTime: this.props.readableTime, event: this.props.event })}>
+                <View style={styles.container}>
+                    <Text style={styles.title}>
+                        {this.props.id}
+                        {this.props.time}
+                        {this.props.readableTime}
+                        {this.props.event ? this.props.events : 'No Event'}
+                    </Text>
+                </View>
+            </TouchableOpacity>
         );
     }
 }
